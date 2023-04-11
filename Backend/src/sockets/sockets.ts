@@ -1,6 +1,7 @@
 import { Server, Socket } from 'socket.io';
 import { Server as HttpServer } from 'http';
 import { DefaultEventsMap } from 'socket.io/dist/typed-events';
+import { NextFunction } from 'express';
 
 export class Sockets {
   private server!: Server;
@@ -23,8 +24,9 @@ export class Sockets {
     return this.server.on('connection', socket => {
       this.allSockets.push(socket);
 
-      socket.on('client: joinDataRead', () => {
-        socket.join('realTimeSender');
+      socket.on('client: joinRoom', (room: string) => {
+        socket.join(`room: ${room}`);
+        console.log(`Connected to ${room}`);
       });
     });
   }

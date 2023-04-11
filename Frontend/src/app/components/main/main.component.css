@@ -1,0 +1,46 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/assets/StartBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.title {
+  margin: 10px;
+}
+
+.container__button {
+  width: 100%;
+  margin: 5px;
+  border-radius: 15px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  outline-offset: 4px;
+  background-color: #5564eb;
+}
+
+.container__span__button {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 15px;
+  font-size: 1.25rem;
+  background: #2d2df4;
+  color: white;
+  transform: translateY(-6px);
+}
+
+.container__button:active .container__span__button {
+  transform: translateY(-2px);
+}
+
+.container__buttom {
+  min-width: 250px;
+  padding: 10px;
+}

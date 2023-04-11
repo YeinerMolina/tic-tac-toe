@@ -1,0 +1,11 @@
+{
+  "watch": "src",
+  "ext": "ts js json",
+  "name": "desarrollo",
+  "env": {
+    "NODE_PORT": 3010,
+    "NODE_ENV": "test"
+  },
+  "ignore": [".git", "node_modules/**/node_modules"],
+  "exec": "ts-node-dev --cls -r tsconfig-paths/register ./src/index.ts"
+}
