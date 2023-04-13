@@ -8,11 +8,24 @@
   background-image: url("/assets/StartBackground.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
   color: white;
 }
 
 .title {
   margin: 10px;
+}
+
+.username {
+  padding: 10px;
+  height: 8%;
+  min-height: 50px;
+  display: flex;
+}
+
+.username input {
+  border-radius: 6px;
+  padding: 0px 6px 0px 6px;
 }
 
 .container__button {

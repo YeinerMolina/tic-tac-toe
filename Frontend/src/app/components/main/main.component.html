@@ -1,16 +1,12 @@
 <div class="container">
   <div class="title"><h1>Tic Tac Toe</h1></div>
-  <div>INSERT USERNAME HERE</div>
+  <div class="username">
+    <input type="text" placeholder="Username" />
+  </div>
   <div class="container__app">
-    <div class="container__buttom">
-      <button class="container__button">
-        <span class="container__span__button">Multiplayer</span>
-      </button>
-    </div>
-
-    <div class="container__buttom">
-      <button class="container__button">
-        <span class="container__span__button">Single Player</span>
+    <div class="container__buttom" *ngFor="let item of buttons">
+      <button class="container__button" (click)="redirect(item.route)">
+        <span class="container__span__button">{{ item.label }}</span>
       </button>
     </div>
   </div>
