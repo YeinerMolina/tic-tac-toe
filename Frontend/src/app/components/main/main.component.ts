@@ -4,17 +4,17 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css'],
+  styleUrls: ['./main.component.scss'],
 })
 export class MainComponent {
   buttons: { label: string; route: string }[] = [
     {
-      label: 'Multiplayer',
-      route: '/multiplayer',
+      label: 'New game vs CPU',
+      route: '/single-player',
     },
     {
-      label: 'Single Player',
-      route: '/single-player',
+      label: 'Multiplayer',
+      route: '/multiplayer',
     },
   ];
 
