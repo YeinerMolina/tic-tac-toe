@@ -1,5 +1,17 @@
 <div class="game">
-  <div class="square__container" *ngFor="let item of [1, 1, 1]">
-    <div class="square" *ngFor="let item of [1, 1, 1]"></div>
+  <div class="gameboard">
+    <div class="square__container" *ngFor="let row of rows">
+      <div
+        class="square"
+        *ngFor="let column of columns"
+        (click)="getId(row, column)"
+      >
+        {{ row }}, {{ column }}
+      </div>
+    </div>
+  </div>
+  <div class="images">
+    <img src="/assets/circle.png" alt="Circle" />
+    <img src="/assets/X.png" alt="Circle" />
   </div>
 </div>

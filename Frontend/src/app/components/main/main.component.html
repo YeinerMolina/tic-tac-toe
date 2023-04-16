@@ -1,14 +1,17 @@
 <div class="container">
   <div class="title"><h1>Tic Tac Toe</h1></div>
   <div class="username">
-    <input type="text" placeholder="Username" />
+    <input
+      type="text"
+      placeholder="Username"
+      [(ngModel)]="username"
+      pInputText
+    />
   </div>
 
   <div class="container__app">
     <div class="container__buttom" *ngFor="let item of buttons">
-      <button class="container__button" (click)="redirect(item.route)">
-        <span class="container__span__button">{{ item.label }}</span>
-      </button>
+      <p-button [routerLink]="item.route" [label]="item.label"></p-button>
     </div>
   </div>
 </div>

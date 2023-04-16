@@ -18,9 +18,5 @@ export class MainComponent {
     },
   ];
 
-  constructor(private readonly router: Router) {}
-
-  redirect(route: string) {
-    this.router.navigate([route]);
-  }
+  username: string = '';
 }
