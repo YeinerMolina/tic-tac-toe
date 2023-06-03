@@ -1,0 +1,78 @@
+.container {
+  width: 100%;
+  aspect-ratio: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cruz {
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  &::after {
+    background-color: #eb1751;
+    content: "";
+    rotate: -45deg;
+    position: absolute;
+    width: 90%;
+    height: 25%;
+    border-radius: 1ex;
+  }
+
+  &::before {
+    background-color: #eb1751;
+    content: "";
+    rotate: 45deg;
+    position: absolute;
+    width: 90%;
+    height: 25%;
+    border-radius: 1ex;
+  }
+}
+
+.circle {
+  position: absolute;
+  background-color: transparent;
+  padding: 0px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  width: 80%;
+  border: 25px solid #f5cd55;
+}
+
+.winnerCircle {
+  border-color: #feffff;
+}
+
+.cruzWinner {
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  &::after {
+    background-color: #feffff;
+    content: "";
+    rotate: -45deg;
+    position: absolute;
+    width: 90%;
+    height: 25%;
+    border-radius: 1ex;
+  }
+
+  &::before {
+    background-color: #feffff;
+    content: "";
+    rotate: 45deg;
+    position: absolute;
+    width: 90%;
+    height: 25%;
+    border-radius: 1ex;
+  }
+}

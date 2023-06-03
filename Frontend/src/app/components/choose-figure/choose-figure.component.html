@@ -1,0 +1,45 @@
+<form
+  [formGroup]="playerForm"
+  [ngClass]="{ container__form: true, extended__height: invalidPlayer() }"
+  *ngIf="_open"
+>
+  <div class="container">
+    <div class="username_selection">
+      <input
+        type="text"
+        placeholder="Username"
+        formControlName="username"
+        required
+      />
+      <span class="error" *ngIf="invalidPlayer()"> Invalid username </span>
+    </div>
+    <h4 class="container__text">Select your avatar</h4>
+    <div class="avatar">
+      <i class="pi pi-chevron-circle-left outline" (click)="prevAvatar()"></i>
+      <img [src]="selectedAvatar" alt="player-avatar" />
+      <i class="pi pi-chevron-circle-right" (click)="nextAvatar()"></i>
+    </div>
+    <h4 class="container__text">Select your figure</h4>
+    <label class="figure_selection">
+      <input type="checkbox" class="hide" />
+      <span class="slider"> </span>
+      <div class="figures" (click)="changeSelectedFigure()">
+        <div class="figure_button">
+          <div class="figure_container">
+            <app-figures [figura]="FIGURES.X"></app-figures>
+          </div>
+        </div>
+        <div class="figure_button">
+          <div class="figure_container">
+            <app-figures [figura]="FIGURES.O"></app-figures>
+          </div>
+        </div>
+      </div>
+    </label>
+    <div class="buttons">
+      <button class="validationButton" (click)="validateAndClose()">
+        Accept
+      </button>
+    </div>
+  </div>
+</form>

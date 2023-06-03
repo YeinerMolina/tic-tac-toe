@@ -1,0 +1,12 @@
+<div class="container">
+  <div
+    *ngIf="showCruz"
+    [ngClass]="{ cruzWinner: this.winner, cruz: !this.winner }"
+  ></div>
+  <div
+    [style.border-width]="circleWidth ?? '20px'"
+    class="circle"
+    *ngIf="showCircle"
+    [ngClass]="{ winnerCircle: this.winner }"
+  ></div>
+</div>

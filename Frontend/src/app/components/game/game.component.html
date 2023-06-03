@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="players">
+    <app-avatar [player]="getPlayer()"></app-avatar>
+    <app-avatar [player]="getSecondPlayer()"></app-avatar>
+  </div>
+
+  <app-choose-figure [open]="getEmergentObservable()"></app-choose-figure>
+  <div class="game-board">
+    <app-game-board></app-game-board>
+  </div>
+</div>

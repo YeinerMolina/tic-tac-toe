@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="avatar">
+    <img [src]="avatar" alt="player-avatar" />
+  </div>
+  <div class="player__content">
+    <span> {{ username }} </span>
+
+    <div class="square">
+      <app-figures [circleWidth]="'10px'" [figura]="figure"></app-figures>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,6 @@
+import { Subject } from 'rxjs';
+
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -9,14 +10,19 @@ import { Router } from '@angular/router';
 export class MainComponent {
   buttons: { label: string; route: string }[] = [
     {
-      label: 'New game vs CPU',
+      label: 'Single Player',
       route: '/single-player',
     },
     {
       label: 'Multiplayer',
       route: '/multiplayer',
     },
+    {
+      label: 'Local Multiplayer',
+      route: '/local-multiplayer',
+    },
   ];
-
-  username: string = '';
+  user: string = '';
+  username: Subject<string> = new Subject<string>();
+  validName: boolean = false;
 }

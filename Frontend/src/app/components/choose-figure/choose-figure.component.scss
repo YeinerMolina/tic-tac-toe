@@ -1,0 +1,162 @@
+.container__form {
+  width: 100%;
+  max-height: 420px;
+  max-width: 600px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 200;
+  padding: 10px;
+  transition: 500ms ease-out;
+  overflow: hidden;
+}
+
+.extended__height {
+  max-height: 440px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #24a0eb;
+  height: 100%;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  color: black;
+  font-family: sans-serif;
+}
+
+.figure_selection {
+  position: relative;
+  height: 40%;
+  background-color: #332167;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  cursor: pointer;
+}
+
+.hide {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.figures {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.figure_button {
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.4s ease-out;
+}
+
+.figure_container {
+  height: 100%;
+  aspect-ratio: 1;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  border-radius: 15px;
+  position: absolute;
+  content: "";
+  z-index: 1;
+  height: 100%;
+  width: 50%;
+  background-color: #6649c4;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.username_selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  input {
+    border: 1px solid #2ffab7;
+    font-family: sans-serif;
+    padding: 10px;
+    width: 80%;
+    border-radius: 10px;
+  }
+  .error {
+    font-family: sans-serif;
+    width: 80%;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.validationButton {
+  background-color: white;
+  border: none;
+  width: 40%;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.avatar {
+  width: 100%;
+  max-height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 30px;
+  color: #332167;
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+}
+
+.container__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

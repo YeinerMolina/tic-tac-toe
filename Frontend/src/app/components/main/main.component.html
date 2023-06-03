@@ -1,17 +1,16 @@
 <div class="container">
-  <div class="title"><h1>Tic Tac Toe</h1></div>
-  <div class="username">
-    <input
-      type="text"
-      placeholder="Username"
-      [(ngModel)]="username"
-      pInputText
-    />
+  <div class="title">
+    <h2>TIC</h2>
+    <h2>TAC</h2>
+    <h2>TOE</h2>
   </div>
-
-  <div class="container__app">
-    <div class="container__buttom" *ngFor="let item of buttons">
-      <p-button [routerLink]="item.route" [label]="item.label"></p-button>
-    </div>
+  <div class="container__buttom">
+    <button
+      class="buttons"
+      *ngFor="let item of buttons"
+      [routerLink]="item.route"
+    >
+      {{ item.label | titlecase }}
+    </button>
   </div>
 </div>

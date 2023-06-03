@@ -1,7 +1,8 @@
 import { Routes } from '@angular/router';
+
+import { GameComponent } from './game/game.component';
 import { MainComponent } from './main/main.component';
 import { MultiplayerComponent } from './multiplayer/multiplayer.component';
-import { SinglePlayerComponent } from './single-player/single-player.component';
 
 export const componentsRoutes: Routes = [
   {
@@ -14,7 +15,7 @@ export const componentsRoutes: Routes = [
   },
   {
     path: 'single-player',
-    component: SinglePlayerComponent,
+    component: GameComponent,
   },
   {
     path: '**',

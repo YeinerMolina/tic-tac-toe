@@ -1,17 +1,15 @@
-<div class="game">
-  <div class="gameboard">
-    <div class="square__container" *ngFor="let row of rows">
-      <div
-        class="square"
-        *ngFor="let column of columns"
-        (click)="getId(row, column)"
-      >
-        {{ row }}, {{ column }}
-      </div>
+<div class="gameboard">
+  <div class="square__container" *ngFor="let column of columns">
+    <div
+      class="square"
+      [ngClass]="{ winner: checkWinnerElement(row, column) }"
+      *ngFor="let row of rows"
+      (click)="getId(row, column)"
+    >
+      <app-figures
+        [winner]="checkWinnerElement(row, column)"
+        [figura]="getFigure(row, column)"
+      ></app-figures>
     </div>
-  </div>
-  <div class="images">
-    <img src="/assets/circle.png" alt="Circle" />
-    <img src="/assets/X.png" alt="Circle" />
   </div>
 </div>

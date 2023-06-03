@@ -3,64 +3,32 @@
   display: flex;
   flex-direction: column;
   padding: 15px;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  background-image: url("/assets/StartBackground.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
   color: white;
+  font-family: system-ui;
 }
 
 .title {
   margin: 10px;
-}
-
-.username {
-  padding: 10px;
-  height: 8%;
-  min-height: 50px;
-  display: flex;
-}
-
-.username input {
-  border-radius: 6px;
-  padding: 0px 6px 0px 6px;
-}
-
-.container__button {
-  width: 100%;
-  margin: 5px;
-  border-radius: 15px;
-  padding: 0;
-  border: none;
-  cursor: pointer;
-  outline-offset: 4px;
-  background-color: #5564eb;
-}
-
-.container__span__button {
-  display: block;
-  padding: 12px 42px;
-  border-radius: 15px;
-  font-size: 1.25rem;
-  background: #2d2df4;
-  color: white;
-  transform: translateY(-6px);
-}
-
-.container__button:active .container__span__button {
-  transform: translateY(-2px);
+  font-size: 50px;
 }
 
 .container__buttom {
-  padding: 10px;
-}
-
-.container__app {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+.buttons {
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  border-radius: 15px;
+  width: 80%;
+  font-size: large;
+  font-family: inherit;
+  background: #2c87bc;
 }
